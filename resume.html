@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View and download Mohd Anas's resume.">
+  <title>Resume | Mohd Anas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .resume-page {
+      min-height: 80vh;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .resume-card {
+      max-width: 850px;
+      margin: 35px auto;
+      padding: 40px 25px;
+      background: #111827;
+      border: 1px solid #263449;
+      border-radius: 18px;
+    }
+
+    .resume-card h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .resume-card p {
+      color: #b7c3d4;
+      line-height: 1.8;
+    }
+
+    .resume-actions {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      background: #2563eb;
+      color: white;
+      border: 1px solid #2563eb;
+      transition: 0.3s;
+    }
+
+    .resume-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .resume-btn.secondary {
+      background: transparent;
+      border-color: #64748b;
+    }
+
+    .resume-preview {
+      width: 100%;
+      height: 750px;
+      margin-top: 35px;
+      border: 1px solid #263449;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .resume-note {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .resume-page { padding: 45px 14px; }
+      .resume-card { padding: 28px 16px; }
+      .resume-card h2 { font-size: 25px; }
+      .resume-preview { height: 520px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Apne existing navbar ka design yahan use kar sakte ho -->
+  <!-- <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html" aria-current="page">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header> -->
+
+  <main class="resume-page">
+    <p>MY RESUME</p>
+    <h1>Mohd Anas</h1>
+    <p>Data Analytics Student | Aspiring Data Analyst & ML Intern</p>
+
+    <section class="resume-card">
+      <h2>My Professional Resume</h2>
+      <p>
+        Explore my educational background, technical skills,
+        and machine learning projects.
+      </p>
+
+      <div class="resume-actions">
+        <a class="resume-btn"
+           href="RESUME.pdf"
+           target="_blank" rel="noopener">
+          View Resume ↗
+        </a>
+
+        <a class="resume-btn secondary"
+           href="RESUME.pdf"
+           download="Mohd_Anas_Resume.pdf">
+          Download PDF ↓
+        </a>
+      </div>
+
+      <iframe
+        class="resume-preview"
+        src="RESUME.pdf"
+        title="Mohd Anas Resume Preview">
+      </iframe>
+
+      <p class="resume-note">
+        If the preview doesn't load, use the View Resume button.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Mohd Anas. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
